@@ -9,13 +9,13 @@ def home(request):
     return render(request, "hello/home.html") # Lab 2 - Render the home.html template for the home view
     #return HttpResponse("Hello, Django! My name is Anthony Yagoda, it is April 6, 2026, and I am learning Django in IS 218-004 - Web Application Development at NJIT.") // OLD from Lab 1
 
-def about(request):
+def DrinkList(request):
     # Lab 2 - Render the about.html template for the about view
-    return render(request, "hello/about.html")
+    return render(request, "hello/Drink_List.html")
 
-def contact(request):
+def DrinkInformation(request):
     # Lab 2 - Render the contact.html template for the contact view
-    return render(request, "hello/contact.html")
+    return render(request, "hello/Drink_Information.html")
 
 def hello_there(request, name):
     # Lab 2 - Render the hello_there.html template and pass the name variable to it
