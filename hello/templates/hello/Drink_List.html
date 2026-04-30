@@ -1,0 +1,62 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+Drink List
+{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'hello/site.css' %}"/>
+{% load static %}
+<h1 style="text-align:center; margin-bottom:20px;">Energy Drink Products</h1>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px; text-align:center;">
+        <img src="{% static 'hello/images/monsterenergy.jpg' %}" width="250">
+        <h3>Monster Energy</h3>
+    </div>
+
+
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px; text-align:center;">
+        <img src="{% static 'hello/images/redbull.jpg' %}" width="250">
+        <h3>Red Bull</h3>
+    </div>
+
+ 
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px; text-align:center;">
+        <img src="{% static 'hello/images/c4energy.jpg' %}" width="250">
+        <h3>C4 Energy</h3>
+    </div>
+
+    
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px; text-align:center;">
+        <img src="{% static 'hello/images/bang.jpg' %}" width="250">
+        <h3>Bang Energy</h3>
+    </div>
+
+   
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px; text-align:center;">
+        <img src="{% static 'hello/images/ghostenergy.jpg' %}" width="250">
+        <h3>Ghost Energy</h3>
+    </div>
+
+    
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px; text-align:center;">
+        <img src="{% static 'hello/images/reign.jpg' %}" width="250">
+        <h3>Reign</h3>
+    </div>
+
+    
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px; text-align:center;">
+        <img src="{% static 'hello/images/rockstar.jpg' %}" width="250">
+        <h3>Rockstar</h3>
+    </div>
+
+   
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px; text-align:center;">
+        <img src="{% static 'hello/images/5hour.jpg' %}" width="250">
+        <h3>5-Hour Energy</h3>
+    </div>
+
+</div>
+{% endblock %}
