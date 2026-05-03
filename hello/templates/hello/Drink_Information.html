@@ -1,0 +1,104 @@
+{% extends "hello/layout.html" %}
+{% block title %}
+Drink Information
+{% endblock %}
+{% block content %}
+{% load static %}
+<h1 style="text-align:center; margin-bottom:20px;">Product Information</h1>
+<div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
+   
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px;">
+        <img src="{% static 'hello/images/monsterenergy.jpg' %}" width="300">
+        <h3>Monster Energy</h3>
+        <p>$2.50 - $3.50</p>
+        <p>
+            Monster Energy comes in a 16 fl oz (473 ml) can with about 160 mg of caffeine per serving. 
+            It contains roughly 54 g of sugar and about 210 calories. Key ingredients include taurine (1000 mg), 
+            ginseng extract, L-carnitine, and B vitamins (B3, B6, B12) to support energy production and alertness.
+        </p>
+    </div>
+
+   
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px;">
+        <img src="{% static 'hello/images/redbull.jpg' %}" width="300">
+        <h3>Red Bull</h3>
+        <p>$2.50 - $3.00</p>
+        <p>
+            Red Bull is sold in a 8.4 fl oz (250 ml) can containing about 80 mg of caffeine and 27 g of sugar 
+            (110 calories). It includes taurine (1000 mg), glucuronolactone, and B-complex vitamins designed 
+            to improve focus and reduce fatigue.
+        </p>
+    </div>
+
+
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px;">
+        <img src="{% static 'hello/images/c4energy.jpg' %}" width="300">
+        <h3>C4 Energy</h3>
+        <p>$2.50 - $4.00</p>
+        <p>
+            C4 Energy is a 16 fl oz drink with about 200 mg of caffeine and 0–5 calories (sugar-free versions use sucralose). 
+            It contains CarnoSyn® beta-alanine (1600 mg), beta-power, and vitamin B12 (250% DV) to support workout performance 
+            and energy endurance.
+        </p>
+    </div>
+
+
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px;">
+        <img src="{% static 'hello/images/ghostenergy.jpg' %}" width="300">
+        <h3>Ghost Energy</h3>
+        <p>$3.00 - $4.50</p>
+        <p>
+            Ghost Energy comes in a 16 fl oz can with 200 mg caffeine, zero sugar, and about 5–15 calories. 
+            It includes nootropics like Alpha-GPC (150 mg), NeuroFactor® (100 mg coffee fruit extract), and 
+            taurine (1000 mg) for focus and energy.
+        </p>
+    </div>
+
+
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px;">
+        <img src="{% static 'hello/images/reign.jpg' %}" width="300">
+        <h3>Reign Total Body Fuel</h3>
+        <p>$2.50 - $3.50</p>
+        <p>
+            Reign is a 16 fl oz energy drink with 300 mg of caffeine, zero sugar, and about 10 calories. 
+            It contains BCAAs (L-leucine, isoleucine, valine at 1000 mg each), electrolytes, and CoQ10 
+            for hydration and performance support.
+        </p>
+    </div>
+
+   
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px;">
+        <img src="{% static 'hello/images/bang.jpg' %}" width="300">
+        <h3>Bang Energy</h3>
+        <p>$2.50 - $3.50</p>
+        <p>
+            Bang Energy comes in a 16 fl oz can with 300 mg caffeine, 0 sugar, and 0 calories. 
+            It includes Super Creatine (dipeptide bonded creatine), BCAAs (5,000 mg), and electrolytes 
+            designed for performance and mental focus.
+        </p>
+    </div>
+
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px;">
+        <img src="{% static 'hello/images/rockstar.jpg' %}" width="300">
+        <h3>Rockstar Energy</h3>
+        <p>$2.00 - $3.50</p>
+        <p>
+            Rockstar Energy typically comes in a 16 fl oz can with 160 mg of caffeine,
+            31-63g of sugar depending on the variant, and around 120-250 calories.
+            It contains taurine, guarana extract, ginseng, and added B vitamins for sustained energy release.
+        </p>
+    </div>
+   
+    <div style="border: 1px solid #ccc; padding: 10px; width: 320px;">
+        <img src="{% static 'hello/images/5hour.jpg' %}" width="300">
+        <h3>5-hour Energy</h3>
+        <p>$2.00 - $3.00</p>
+        <p>
+            5-hour Energy is a 2 fl oz shot containing about 200 mg caffeine, 0 sugar, and only 4 calories. 
+            It includes B vitamins (B6, B12 at over 8000% DV), amino acids like taurine and phenylalanine, 
+            and is designed for quick absorption and short-term energy boost.
+        </p>
+    </div>
+
+</div>
+{% endblock %}
