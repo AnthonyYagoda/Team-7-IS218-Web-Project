@@ -1,5 +1,5 @@
 from django import forms
-from hello.models import Feedback
+from hello.models import Feedback #Lab 3 Feedback Form Stuff - Import the Feedback model from the models.py file in the hello app
 
 
 #Lab 3 Feedback Form Stuff:  

@@ -6,9 +6,9 @@ from django.http import HttpResponse
 from django.shortcuts import render # Lab 2 - Import the render function to render templates
 from datetime import datetime # Lab 2 - Import the datetime module to get the current date and time
 
-from hello.forms import FeedbackForm #Lab 3 Feedback Form Stuff
-from hello.models import Product, Feedback #Lab 3 Feedback Form Stuff
-from django.views.generic import ListView #Lab 3 Feedback Form Stuff
+from hello.forms import FeedbackForm #Lab 3 Feedback Form Stuff - Import the FeedbackForm class from the forms.py file in the hello app
+from hello.models import Product, Feedback #Lab 3 Feedback Form Stuff - Import the Product and Feedback models from the models.py file in the hello app
+from django.views.generic import ListView #Lab 3 Feedback Form Stuff - Import the ListView class from django
 
 # Create your views here.
 
@@ -31,7 +31,6 @@ def hello_there(request, name):
 
 
 #Lab 3 Feeedback System Stuff:
-
 def product_feedback(request, product_id):
     product = Product.objects.get(id=product_id) #Identifies the product based on the id in the URL
     products = Product.objects.all() #gets all products to display on feedback page
