@@ -1,7 +1,7 @@
 from itertools import product
 from urllib import request
 
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from django.shortcuts import render # Lab 2 - Import the render function to render templates
 from datetime import datetime # Lab 2 - Import the datetime module to get the current date and time
@@ -27,12 +27,12 @@ def DrinkInformation(request):
 def hello_there(request, name):
     # Lab 2 - Render the hello_there.html template and pass the name variable to it
     print(request.build_absolute_uri()) # optional - prints the full URL of the request to the console for debugging purposes
-    return render(request, 'hello\hello_there.html', {'name': name, 'date': datetime.now()})
+    return render(request, 'hello/hello_there.html', {'name': name, 'date': datetime.now()})
 
 
 #Lab 3 Feeedback System Stuff:
 def product_feedback(request, product_id):
-    product = Product.objects.get(id=product_id) #Identifies the product based on the id in the URL
+    product = get_object_or_404(Product, id=product_id)
     products = Product.objects.all() #gets all products to display on feedback page
     feedback_list = Feedback.objects.filter(product=product) #filters feedback to only show feedback for the selected product
 
