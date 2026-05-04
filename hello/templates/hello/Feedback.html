@@ -1,0 +1,55 @@
+{% extends "hello/layout.html" %}
+{% block content %}
+
+<!-- Dropdown menu to select a product -->
+<form method="GET" action=""> 
+<label for="product-select"><h2>Select a product:</h2></label>
+<select id="product-select" onchange="location.href='/Feedback/' + this.value + '/'">
+    
+    {% for p in products %}
+      <option value="{{ p.id }}" {% if p.id = product.id %}selected{% endif %}>
+        {{ p.name }}
+      </option>
+    {% endfor %}
+  </select>
+</form>
+
+<!-- Display the selected product's details -->
+  <h1>Leave A Review of {{ product.name }}</h1>
+
+  <h2> Product Details</h2>
+  <h2>{{ product.name }}</h2>
+  <h2>Product Description: {{ product.description }}</h2>
+  <h2>Product Price: ${{ product.price }}</h2>
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="Submit">Post Comment</button>
+  </form>
+
+ 
+ <!--User Reviews-->
+  <h3>User Reviews</h3>
+
+ <!--Rating System. 
+ Loops through to get number of stars based on 
+ number inputed by user-->
+ 
+  {% for f in feedback_list %}
+  <strong>Rating:
+  {% for i in "12345" %}
+    {% if forloop.counter <= f.ratings %}
+      ★
+    {% else %}
+      ☆
+    {% endif %}
+  {% endfor %}
+</strong>
+  <br>
+  <small>Posted on {{ f.submitted_at|date:"F j, Y, g:i A" }}</small>
+</p>
+{% empty %}
+  <p>No feedback given yet.</p>
+{% endfor %}
+{% endblock %}
