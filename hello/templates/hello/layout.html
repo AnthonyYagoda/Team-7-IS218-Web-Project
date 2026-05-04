@@ -13,7 +13,6 @@
             <a href="{% url 'DrinkList' %}" class="navbar-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">Drink List</a>
             <a href="{% url 'DrinkInformation' %}" class="navbar-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Drink Information</a>
             <a href="{% url 'Feedback' 1 %}">Feedback</a> <!--Link to Main Feedback Page-->
-
         </div>
         
         <div class="body-content">
