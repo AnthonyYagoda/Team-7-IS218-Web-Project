@@ -3,10 +3,11 @@ from django.utils import timezone #Lab 3.
 
 #Feedback Form Stuff:
 #Defines a Product model with fields for name, description, price, and image URL.
-class Product(models.Model): 
+class Product(models.Model):
     name = models.CharField(max_length=300)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    price_range = models.CharField(max_length=50, blank=True)
     image = models.URLField(blank=True)
     
 #Returns String of data present in Product model.

@@ -10,9 +10,9 @@
 	<body>
         <div class="navbar">
             <a href="{% url 'home' %}" class="navbar-brand {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
-            <a href="{% url 'DrinkList' %}" class="navbar-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">Drink List</a>
-            <a href="{% url 'DrinkInformation' %}" class="navbar-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Drink Information</a>
-            <a href="{% url 'Feedback' 1 %}">Feedback</a> <!--Link to Main Feedback Page-->
+            <a href="{% url 'DrinkList' %}" class="navbar-item {% if request.resolver_match.url_name == 'DrinkList' %}active{% endif %}">Drink List</a>
+            <a href="{% url 'DrinkInformation' %}" class="navbar-item {% if request.resolver_match.url_name == 'DrinkInformation' %}active{% endif %}">Drink Information</a>
+            <a href="{% url 'Feedback' 1 %}" class="navbar-item {% if request.resolver_match.url_name == 'Feedback' %}active{% endif %}">Feedback</a>
         </div>
         
         <div class="body-content">
@@ -20,7 +20,7 @@
             {% endblock %}
             <hr/>
             <footer>
-                <p>&copy; 2024</p>
+                <p>&copy; 2026</p>
             </footer>
         </div>
 	</body>
