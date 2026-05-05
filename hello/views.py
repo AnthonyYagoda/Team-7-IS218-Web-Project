@@ -10,6 +10,9 @@ from hello.forms import FeedbackForm #Lab 3 Feedback Form Stuff - Import the Fee
 from hello.models import Product, Feedback #Lab 3 Feedback Form Stuff - Import the Product and Feedback models from the models.py file in the hello app
 from django.views.generic import ListView #Lab 3 Feedback Form Stuff - Import the ListView class from django
 
+from django.contrib.admin.views.decorators import staff_member_required
+from .models import Feedback
+
 # Create your views here.
 
 def home(request):
@@ -54,4 +57,13 @@ def product_feedback(request, product_id):
         "product": product,
         "feedback_list": feedback_list,
         "form": form,
+    })
+
+# Admin only: displays all user feedback in the form of a report
+
+@staff_member_required
+def feedback_report(request):
+    feedback_list = Feedback.objects.select_related("product").order_by("-submitted_at")
+    return render(request, "hello/feedback_report.html", {
+        "feedback_list": feedback_list
     })
